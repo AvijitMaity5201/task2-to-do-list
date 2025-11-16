@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #2d2d2d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background: #171518a8;
+    padding: 20px;
+    text-align: center;
+    
+    display:flex;
+}
+
+.app-logo {
+    width: 50px;    
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.app-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.input-section {
+    padding: 20px;
+    background: #363636;
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#dateInput {
+    padding: 12px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    color-scheme: dark;
+}
+
+#addBtn {
+    padding: 12px 30px;
+    background: #9b59d0;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: #8a4cbd;
+}
+
+.task-list-container {
+    padding: 20px;
+}
+
+.task-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #444;
+    margin-bottom: 25px;
+}
+
+.header-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header-stats {
+    font-weight: 500;
+    color: #aaa;
+}
+
+.day-section {
+    margin-bottom: 20px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.day-header {
+    background: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day-date {
+    color: #aaa;
+}
+
+.day-count {
+    color: #aaa;
+}
+
+.day-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-day {
+    background: #8b0000;
+    color: #fff;
+}
+
+.add-task {
+    background: #9b59d0;
+    color: #fff;
+}
+
+.task-item {
+    padding: 15px 20px;
+    background: #3a3a3a;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-checkbox {
+    accent-color: #9b59d0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 14px;
+}
+
+.delete-task {
+    padding: 6px 12px;
+    background: #8b0000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 8px;
+    }
+
+    
+    .header {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .app-logo {
+        width: 35px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .app-title {
+        font-size: 22px;
+    }
+
+    
+    .input-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #taskInput,
+    #dateInput,
+    #addBtn {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #addBtn {
+        padding: 12px;
+    }
+
+   
+    .task-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .header-title {
+        font-size: 14px;
+    }
+
+    .header-stats {
+        font-size: 14px;
+    }
+
+    
+    .day-header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .day-info {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .day-buttons button {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    /* TASK ITEM */
+    .task-item {
+        padding: 12px 15px;
+        gap: 8px;
+    }
+
+    .task-checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    .task-text {
+        font-size: 13px;
+    }
+
+    .delete-task {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .empty-state {
+        padding: 30px;
+        font-size: 14px;
+    }
+}

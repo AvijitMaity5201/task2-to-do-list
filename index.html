@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2DO - Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="2-do.gif" class="app-logo" alt="Logo">
+            <div class="app-title">2DO</div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter new task">
+            <input type="date" id="dateInput">
+            <button id="addBtn">Add</button>
+        </div>
+
+        <div class="task-list-container">
+            <div class="task-list-header">
+                <span class="header-title">Task - list</span>
+                <span class="header-stats" id="statsText">2 days | 2 tasks</span>
+            </div>
+            <div id="taskList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
